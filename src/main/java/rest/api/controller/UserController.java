@@ -10,7 +10,7 @@ import java.util.List;
  * Date: 21/11/2014
  * Time: 09:53
  */
-public class UserController implements GenericController
+public class UserController implements GenericController<User>
 {
     private static final Logger log = Logger.getLogger(UserController.class);
 

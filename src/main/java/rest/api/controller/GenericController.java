@@ -16,24 +16,24 @@ import static rest.api.controller.GenericRestURIConstants.*;
  */
 @Controller
 @RequestMapping("home")
-public interface GenericController
+public interface GenericController <M>
 {
     @RequestMapping(value = "test", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public void test();
 
     @RequestMapping(value = CREATE_MODEL, method = RequestMethod.POST)
-    public @ResponseBody User createModel(@RequestBody User User);
+    public @ResponseBody User createModel(@RequestBody M model);
 
     @RequestMapping(value = GET_MODEL, method = RequestMethod.GET)
     public @ResponseBody User getModelById(@PathVariable("id") String id);
 
     @RequestMapping(value = GET_ALL_MODEL, method = RequestMethod.GET)
-    public @ResponseBody List<User> getAllModels();
+    public @ResponseBody List<M> getAllModels();
 
     @RequestMapping(value = DELETE_MODEL, method = RequestMethod.DELETE)
     public @ResponseBody User deleteModelById(@PathVariable("id") String id);
 
     @RequestMapping(value = UPDATE_MODEL, method = RequestMethod.PUT)
-    public @ResponseBody User updateModel(@RequestBody User User);
+    public @ResponseBody User updateModel(@RequestBody M model);
 }
