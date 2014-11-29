@@ -10,40 +10,48 @@ import java.util.UUID;
  */
 public class User
 {
-    private UUID id;
+    private String id;
     private String firstName;
     private String lastName;
     private Date dateCreated;
 
-    public UUID getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id)
+    {
         this.id = id;
     }
 
-    public String getFirstName() {
+    public String getFirstName()
+    {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public void setFirstName(String firstName)
+    {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
+    public String getLastName()
+    {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
+    public void setLastName(String lastName)
+    {
         this.lastName = lastName;
     }
 
-    public Date getDateCreated() {
+    public Date getDateCreated()
+    {
         return dateCreated;
     }
 
-    public void setDateCreated(Date dateCreated) {
+    public void setDateCreated(Date dateCreated)
+    {
         this.dateCreated = dateCreated;
     }
 }
